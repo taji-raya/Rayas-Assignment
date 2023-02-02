@@ -5,7 +5,15 @@ padding: 0px;
 margin: 0px;
 }
 body{
+    font-family: 'Montserrat', sans-serif;
     background-color: rgb(252, 249, 251);
+    border: 10px solid rgb(255,227,215);
+}
+#aboutBorder{
+    border: 10px solid #ff9f74;
+}
+#projectsBorder{
+    border:10px solid #ffa99c;
 }
 a{
     border: 5px;
@@ -27,10 +35,6 @@ a:link{
 a:active{
 color:black;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
-}
-
 /*-------------------------------------------*/
 
 .header{
@@ -42,6 +46,13 @@ body{
     font-family: 'Bebas Neue', cursive;
     font-size: 35px;
     letter-spacing: 10px;
+}
+#aboutHeader{
+    background-image: url(Images/AboutBg.jpeg);
+}
+#projectsHeader{
+    background-image: url(Images/projectsBg.jpeg);
+    object-fit: cover;
 }
 .header img{
     max-width: fit-content;
@@ -56,23 +67,30 @@ body{
     list-style:none;
 }
 .navbar li {
-    display: inline-block;
-    width: 33%;
+    width: 10%;
     text-align: center;
     font-size: 20px;
+    float: right;
 }
+#logo{
+    float: left;
+    margin-left: 10%;
 
+}
+#logo img{
+    width: 50px;
+    border-radius: 50%;
+}
 .navbar ul li:hover {
     border-bottom: 4px solid rgb(255,227,215);
 }
 
 .about{
-    padding: 15% 15% 20% 15%;
-    
+    padding: 15% 15% 30% 15%;
 }
 
 .about h1{
-    font-size: 40px;
+    font-size:65px;
 }
 .about p{
     font-size: 25px;
@@ -80,33 +98,43 @@ body{
 .about img{
     width: 45%;
 }
+.socials{
+    padding: 30px;
+  }
+.socials ul{
+    list-style: none;
+  }
+  .socials li{
+    width: 5%;
+    text-align: center;
+    font-size: 25px;
+    color:rgb(255,227,215);
+    float: left;
+    padding-right:10% ;
+  }
 
 /*-------------------------------------------*/
 
 .projects{
     align-items: center;
     vertical-align: middle;
-    padding: 80px;
-    padding-bottom: 10%;
+    padding: 8%;
     overflow: hidden;
 }
 .headline{
     font-size: 40px;
 }
 .swiperContainer{
-    padding: 5%;
-    margin: 10px;
-    width: 1280px;
     vertical-align: middle;
-    scroll-behavior: smooth;
+    left: 0;
 }
 .swiperContent{
     display: flex;
-    padding: 10px;
 
+    scroll-behavior: smooth;
 }
 .swiperCard{
-    margin: 10px;
+    margin: 20px;
     padding: 20px;
     width: 90%;
     box-shadow: 0px 5px 15px 0px rgba(66, 66, 68, 0.3);
@@ -155,9 +183,11 @@ margin: 10px;
 }
 .nextButton{
     right: 0;
+padding-top: 15%;
 }
 .prevButton{
     left: 0;
+    padding-top: 15%;
 }
 
 /*-------------------------------------------*/
@@ -175,7 +205,7 @@ margin: 10px;
 
 }
 .contactContainer p{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .contactContent{
     display: flex;
