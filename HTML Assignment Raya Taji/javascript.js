@@ -11,3 +11,4 @@ prev.addEventListener('click', () => {
 
     track.style.transform = `translateX(-${0}px)`;
 })
+

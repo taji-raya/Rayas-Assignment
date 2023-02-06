@@ -32,15 +32,35 @@
 
             </div>
 
-        </nav>
-        <div class='dataContainer'>
-            <div class='card'>
-                <div class='cardContent'>
-                    <h3>test</h3>
+        </nav>     
+        <section>
+            
+                <div class="buttonContainer">
+                    <form id="addPost">
+                        <div>
+                            <input type="text" id = "title" placeholder="Title">
+                        </div>
+                        <div>
+                            <textarea id="body" placeholder="Body"></textarea>
+                        </div>
+                        <div class="wrapper">
+                            <input type="submit" value="Submit" id="submitBtn">
+                            <div class="editPost">
+                                <input type="submit" value="Edit" id="editBtn">
+                            </div>
+                        </div>
+                    
+                    </form>
+                    
                 </div>
+          
+            <div class='dataContainer' id="dataContainer">
             </div>
+            
+            
 
-        </div>
+        </section>
+       
 
 
 </div>
@@ -49,7 +69,7 @@
 
 </section>
 
-<script src="javascript.js"></script>
+<script src="dataScript.js"></script>
 </body>
 
 </div>
