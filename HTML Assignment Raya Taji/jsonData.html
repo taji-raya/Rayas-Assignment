@@ -45,8 +45,7 @@
                         </div>
                         <div class="wrapper">
                             <input type="submit" value="Submit" id="submitBtn">
-                            <div class="editPost">
-                                <button id="editBtn">Edit</button>
+                            <div id="editPost">
                             </div>
                         </div>
                     
@@ -56,13 +55,8 @@
           
             <div class='dataContainer' id="dataContainer">
             </div>
-            
-            
-
         </section>
        
-
-
 </div>
 
 </div>
@@ -70,6 +64,13 @@
 </section>
 
 <script src="dataScript.js"></script>
+<script>
+    function dataDeposit(title, body){
+        document.getElementById('title').value = title;
+        document.getElementById('body').value = body;
+
+    }
+</script>
 </body>
 
 </div>

@@ -20,8 +20,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         //we add new data
         completeData.map((values) => {
             data1 += `
-                <div class='card' >
-                    <div class='cardContent' >
+                <div class='card' onClick = "dataDeposit('${values.title}', \`${values.body}\`)">
+                    <div class='cardContent'>
                         <h1 class="dataTitle">Title:  ${values.title}</h1>
                         <br>
                         <p class="dataBody">${values.body}</p>
@@ -58,23 +58,23 @@ function addPost(e) {
         .then((response) => response.json())
         .then((completeData) => {
             let data1 = "";
-        completeData.map((values) => {
             data1 += `
                 <div class='card' >
                     <div class='cardContent' >
-                        <h1 class="dataTitle">Title:  ${values.title}</h1>
+                        <h1 class="dataTitle">Title:  ${completeData.title}</h1>
                         <br>
-                        <p class="dataBody">${values.body}</p>
+                        <p class="dataBody">${completeData.body}</p>
                     </div>
                 </div>`
-        });
-        document.getElementById("dataContainer").innerHTML = data1;
+        
+        document.getElementById("dataContainer").innerHTML += data1;
     });
             
     
 }
-//document.getElementById("editPost").addEventListener('submit', editPost);
 //To edit the post
+document.getElementById("editPost").addEventListener('submit', editPost);
+
 function editPost(e){
     e.preventDefault();
     fetch('https://jsonplaceholder.typicode.com/posts/1', {
